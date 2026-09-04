@@ -1,0 +1,44 @@
+/* ===== Gear Up — styles complémentaires ===== */
+
+/* Largeurs hero adaptées aux formats IT (clavier paysage, souris portrait, casque carré) */
+.hero-w-k { width: min(92vw, 620px); }
+@media (min-width: 768px)  { .hero-w-k { width: min(66vw, 760px); } }
+@media (min-width: 1024px) { .hero-w-k { width: min(56vw, 820px); } }
+@media (min-width: 1280px) { .hero-w-k { width: min(48vw, 880px); } }
+
+.hero-w-m { width: min(62vw, 300px); }
+@media (min-width: 768px)  { .hero-w-m { width: min(38vw, 360px); } }
+@media (min-width: 1024px) { .hero-w-m { width: min(32vw, 400px); } }
+@media (min-width: 1280px) { .hero-w-m { width: min(27vw, 430px); } }
+
+.hero-w-h { width: min(70vw, 380px); }
+@media (min-width: 768px)  { .hero-w-h { width: min(44vw, 460px); } }
+@media (min-width: 1024px) { .hero-w-h { width: min(36vw, 500px); } }
+@media (min-width: 1280px) { .hero-w-h { width: min(31vw, 540px); } }
+
+/* ===== Floats idle (équivalent des tweens GSAP sine.inOut yoyo) ===== */
+/* chips: y+3 rot+1 · badges: y+4 rot+1.2 · free: y+4 rot+1.2 · hero: y+2 */
+@keyframes floatIn {
+  from { translate: 0 0;    rotate: 0deg; }
+  to   { translate: 0 3px;  rotate: 1deg; }
+}
+@keyframes floatBd {
+  from { translate: 0 0;    rotate: 0deg; }
+  to   { translate: 0 4px;  rotate: 1.2deg; }
+}
+@keyframes floatHero {
+  from { translate: 0 0; }
+  to   { translate: 0 2px; }
+}
+.float-in { animation: floatIn 4.4s ease-in-out infinite alternate; }
+.float-in.f2 { animation-duration: 5.1s; animation-delay: .7s; }
+.float-in.f3 { animation-duration: 5.8s; animation-delay: 1.4s; }
+.float-hero { animation: floatHero 6s ease-in-out infinite alternate; }
+
+/* état initial scène inactive */
+.hidden-initial { opacity: 0; }
+
+/* respect de la préférence mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  .float-in, .float-hero { animation: none; }
+}
