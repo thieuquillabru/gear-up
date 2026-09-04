@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gear Up — Interactive Gaming Gear Showcase</title>
+    <meta name="description" content="A cinematic gaming-gear showcase: RGB mechanical keyboards, ultra-light mice and immersive ANC headsets with choreographed scene transitions."/>
+    <link rel="preload" as="image" href="./img/hero-keyboard.svg" fetchpriority="high"/>
+    <link rel="stylesheet" href="./fonts/fonts.css"/>
+    <link rel="stylesheet" href="./css/app.css"/>
+    <link rel="stylesheet" href="./css/custom.css"/>
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div id="root" class="relative h-[100dvh] w-full overflow-hidden bg-[#020D06] font-sans">
+
+      <!-- ===== BANDEAU PROMO ===== -->
+      <div class="relative z-[80] h-9 w-full overflow-hidden">
+        <div id="bannerBgA" class="absolute inset-0" style="background:#9F33FF;"></div>
+        <div id="bannerBgB" class="absolute inset-0 opacity-0" style="background:#1CC8E0;"></div>
+        <div class="relative flex h-full items-center justify-center px-4">
+          <span id="bannerText" class="whitespace-nowrap font-sans text-[11px] font-semibold tracking-[0.01em] md:text-[13.5px]" style="color:#FFFFFF;">🔥🔥 Get 10% OFF and Gear Up Like a Pro 🔥🔥</span>
+        </div>
+      </div>
+
+      <!-- ===== NAV PILL ===== -->
+      <nav aria-label="Primary" class="absolute left-3 top-[76px] z-[70] flex h-11 items-center gap-2.5 rounded-full border border-white/[0.14] bg-white/[0.08] px-3 py-1.5 backdrop-blur-[12px] md:left-1/2 md:h-14 md:-translate-x-1/2 md:gap-7 md:px-[30px] md:py-2">
+        <a href="#" class="font-sans text-[10px] font-bold uppercase tracking-[0.06em] text-white transition-opacity duration-150 hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-[11px] md:text-[13px]">MENU</a>
+        <a href="#" class="font-sans text-[10px] font-bold uppercase tracking-[0.06em] text-white transition-opacity duration-150 hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-[11px] md:text-[13px]">ABOUT</a>
+        <a href="#" class="font-sans text-[10px] font-bold uppercase tracking-[0.06em] text-white transition-opacity duration-150 hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-[11px] md:text-[13px]">GALLERY</a>
+        <a href="#" class="font-sans text-[10px] font-bold uppercase tracking-[0.06em] text-white transition-opacity duration-150 hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-[11px] md:text-[13px]">DELIVERY</a>
+      </nav>
+
+      <!-- ===== BOUTON ORDER ===== -->
+      <button id="orderBtn" type="button" class="absolute right-2.5 top-[76px] z-[70] flex h-11 items-center overflow-hidden rounded-full px-3 font-sans text-[11.5px] font-bold tracking-[0.01em] shadow-[0_12px_28px_rgba(0,0,0,0.28)] transition-[scale,filter] duration-150 hover:scale-105 hover:brightness-[1.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.94] md:right-[5.5vw] md:h-14 md:px-[26px] md:text-sm" style="background-color:#A238FF;color:#1A0530;">
+        <span class="inline-block whitespace-nowrap">Order Now →</span>
+      </button>
+
+      <!-- ===== MAIN ===== -->
+      <main id="stage" aria-label="Gaming gear showcase — KEY MASTER" class="relative h-[calc(100dvh-36px)] w-full overflow-hidden">
+
+        <!-- ══════ SCÈNE 1 : KEYBOARD (violet RGB) ══════ -->
+        <div class="scene-el absolute inset-0" data-scene="k" data-z="0" aria-hidden="true" style="z-index:0;background:radial-gradient(ellipse 62% 56% at 50% 46%, #3A1470 0%, transparent 72%), radial-gradient(ellipse 120% 110% at 50% 50%, transparent 55%, #06020F 100%), linear-gradient(180deg, #0D0520 0%, #06020F 100%);"></div>
+        <div class="scene-el pointer-events-none absolute inset-0 flex select-none flex-col items-center justify-center" data-scene="k" data-z="10" aria-hidden="true" style="z-index:10;">
+          <span class="word-line block whitespace-nowrap font-display text-[clamp(5rem,30vw,9rem)] uppercase leading-[0.86] tracking-[-0.01em] md:text-[26vw] lg:text-[24vw] xl:text-[clamp(9rem,23vw,21rem)]" style="color:#B44DFF;">KEY</span>
+          <span class="word-line block whitespace-nowrap font-display text-[clamp(5rem,30vw,9rem)] uppercase leading-[0.86] tracking-[-0.01em] md:text-[26vw] lg:text-[24vw] xl:text-[clamp(9rem,23vw,21rem)]" style="color:#B44DFF;">MASTER</span>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[18%] top-[60%] md:left-[27%] md:top-[63%] xl:left-[33%] xl:top-[66%]" data-scene="k" data-z="20" aria-hidden="true" style="z-index:20;">
+          <div class="float-in"><img src="./img/acc-cable.svg" alt="" loading="lazy" decoding="async" draggable="false" class="w-[90px] md:w-[120px] xl:w-[150px] h-auto" style="transform:rotate(-12deg);"/></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 right-[7%] top-[38%] md:right-[20%] md:top-[41%] lg:right-[22%] xl:right-[26%] xl:top-[43%]" data-scene="k" data-z="30" aria-hidden="true" style="z-index:30;">
+          <div class="float-in"><div class="flex items-center justify-center rounded-full shadow-[0_12px_26px_rgba(0,0,0,0.35)] h-12 w-12 md:h-16 md:w-16 xl:h-[84px] xl:w-[84px]" style="background:#2A1052;border:3px solid #A238FF;"><img src="./img/acc-keycap.svg" alt="" loading="lazy" decoding="async" draggable="false" class="h-[72%] w-[72%] object-contain"/></div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 right-[9%] top-[58%] md:right-[22%] md:top-[60%] lg:right-[24%] xl:right-[28%] xl:top-[62%]" data-scene="k" data-z="30" aria-hidden="true" style="z-index:30;">
+          <div class="float-in"><div class="flex items-center justify-center rounded-full shadow-[0_12px_26px_rgba(0,0,0,0.35)] h-11 w-11 md:h-14 md:w-14 xl:h-[72px] xl:w-[72px]" style="background:#2A1052;border:3px solid #A238FF;"><img src="./img/acc-dongle.svg" alt="" loading="lazy" decoding="async" draggable="false" class="h-[72%] w-[72%] object-contain"/></div></div>
+        </div>
+        <div class="scene-el absolute left-1/2 top-[44%] -translate-x-1/2 -translate-y-1/2 md:top-[46%] hero-w-k" data-scene="k" data-z="40" style="z-index:40;">
+          <div class="float-hero">
+            <img src="./img/hero-keyboard.svg" alt="75% mechanical gaming keyboard with per-key RGB and coiled USB-C cable" loading="eager" fetchpriority="high" decoding="async" draggable="false" class="h-auto w-full" style="transform:rotate(-3deg);filter:drop-shadow(0 42px 54px rgba(0,0,0,0.42));"/>
+            <div class="hero-shadow absolute left-[14%] top-[88%] h-[30px] w-[72%] rounded-full" aria-hidden="true" style="background:radial-gradient(rgba(0,0,0,0.38) 0%, transparent 70%);filter:blur(5px);"></div>
+          </div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[14%] top-[25%] md:left-[26%] md:top-[26%] lg:left-[28%] xl:left-[30%] xl:top-[27%]" data-scene="k" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-4deg);background:rgba(22,8,40,0.75);border-color:#A238FF;color:#D08CFF;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(162,56,255,0.2) 0px 0px 22px;">Hot-Swap</div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[6%] top-[37%] md:left-[18%] md:top-[37%] lg:left-[20%] xl:left-[22%] xl:top-[38%]" data-scene="k" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-8deg);background:rgba(22,8,40,0.75);border-color:#A238FF;color:#D08CFF;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(162,56,255,0.2) 0px 0px 22px;">Gasket</div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[10%] top-[50%] md:left-[22%] md:top-[50%] lg:left-[24%] xl:left-[26%] xl:top-[52%]" data-scene="k" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-10deg);background:rgba(22,8,40,0.75);border-color:#A238FF;color:#D08CFF;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(162,56,255,0.2) 0px 0px 22px;">Per-Key RGB</div></div>
+        </div>
+
+        <!-- ══════ SCÈNE 2 : MOUSE (cyan électrique) ══════ -->
+        <div class="scene-el absolute inset-0 hidden-initial" data-scene="m" data-z="0" aria-hidden="true" style="z-index:0;background:radial-gradient(ellipse 62% 56% at 50% 46%, #085A6E 0%, transparent 72%), radial-gradient(ellipse 120% 110% at 50% 50%, transparent 55%, #020D12 100%), linear-gradient(180deg, #021820 0%, #020D12 100%);opacity:0;"></div>
+        <div class="scene-el pointer-events-none absolute inset-0 flex select-none flex-col items-center justify-center hidden-initial" data-scene="m" data-z="10" aria-hidden="true" style="z-index:10;">
+          <span class="word-line block whitespace-nowrap font-display text-[clamp(5rem,30vw,9rem)] uppercase leading-[0.86] tracking-[-0.01em] md:text-[26vw] lg:text-[24vw] xl:text-[clamp(9rem,23vw,21rem)]" style="color:#22D3EE;">CLICK</span>
+          <span class="word-line block whitespace-nowrap font-display text-[clamp(5rem,30vw,9rem)] uppercase leading-[0.86] tracking-[-0.01em] md:text-[26vw] lg:text-[24vw] xl:text-[clamp(9rem,23vw,21rem)]" style="color:#22D3EE;">PRO</span>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 right-[10%] top-[24%] md:right-[24%] md:top-[28%] xl:right-[30%] xl:top-[30%]" data-scene="m" data-z="20" aria-hidden="true" style="z-index:20;">
+          <div class="float-in"><img src="./img/acc-battery.svg" alt="" loading="lazy" decoding="async" draggable="false" class="w-[40px] md:w-[54px] xl:w-[68px] h-auto" style="transform:rotate(8deg);"/></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 right-[7%] top-[38%] md:right-[20%] md:top-[41%] lg:right-[22%] xl:right-[26%] xl:top-[43%]" data-scene="m" data-z="30" aria-hidden="true" style="z-index:30;">
+          <div class="float-in"><div class="flex items-center justify-center rounded-full shadow-[0_12px_26px_rgba(0,0,0,0.35)] h-12 w-12 md:h-16 md:w-16 xl:h-[84px] xl:w-[84px]" style="background:#073844;border:3px solid #1FD5EE;"><img src="./img/acc-wheel.svg" alt="" loading="lazy" decoding="async" draggable="false" class="h-[72%] w-[72%] object-contain"/></div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 right-[9%] top-[58%] md:right-[22%] md:top-[60%] lg:right-[24%] xl:right-[28%] xl:top-[62%]" data-scene="m" data-z="30" aria-hidden="true" style="z-index:30;">
+          <div class="float-in"><div class="flex items-center justify-center rounded-full shadow-[0_12px_26px_rgba(0,0,0,0.35)] h-11 w-11 md:h-14 md:w-14 xl:h-[72px] xl:w-[72px]" style="background:#073844;border:3px solid #1FD5EE;"><img src="./img/acc-nano.svg" alt="" loading="lazy" decoding="async" draggable="false" class="h-[72%] w-[72%] object-contain"/></div></div>
+        </div>
+        <div class="scene-el absolute left-1/2 top-[44%] -translate-x-1/2 -translate-y-1/2 md:top-[46%] hero-w-m" data-scene="m" data-z="40" style="z-index:40;">
+          <div class="float-hero">
+            <img src="./img/hero-mouse.svg" alt="Ultra-light wireless gaming mouse with cyan RGB accents" loading="lazy" decoding="async" draggable="false" class="h-auto w-full" style="transform:rotate(0deg);filter:drop-shadow(0 42px 54px rgba(0,0,0,0.42));"/>
+            <div class="hero-shadow absolute left-[24%] top-[92%] h-[34px] w-[52%] rounded-full" aria-hidden="true" style="background:radial-gradient(rgba(0,0,0,0.38) 0%, transparent 70%);filter:blur(5px);"></div>
+          </div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[14%] top-[25%] md:left-[26%] md:top-[26%] lg:left-[28%] xl:left-[30%] xl:top-[27%]" data-scene="m" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-4deg);background:rgba(3,30,38,0.75);border-color:#1FD5EE;color:#67E8F9;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(31,213,238,0.2) 0px 0px 22px;">26K DPI</div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[6%] top-[37%] md:left-[18%] md:top-[37%] lg:left-[20%] xl:left-[22%] xl:top-[38%]" data-scene="m" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-8deg);background:rgba(3,30,38,0.75);border-color:#1FD5EE;color:#67E8F9;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(31,213,238,0.2) 0px 0px 22px;">55 g</div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[10%] top-[50%] md:left-[22%] md:top-[50%] lg:left-[24%] xl:left-[26%] xl:top-[52%]" data-scene="m" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-10deg);background:rgba(3,30,38,0.75);border-color:#1FD5EE;color:#67E8F9;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(31,213,238,0.2) 0px 0px 22px;">8K Polling</div></div>
+        </div>
+
+        <!-- ══════ SCÈNE 3 : HEADSET (orange) ══════ -->
+        <div class="scene-el absolute inset-0 hidden-initial" data-scene="h" data-z="0" aria-hidden="true" style="z-index:0;background:radial-gradient(ellipse 62% 56% at 50% 46%, #7A2E08 0%, transparent 72%), radial-gradient(ellipse 120% 110% at 50% 50%, transparent 55%, #140502 100%), linear-gradient(180deg, #200A02 0%, #140502 100%);opacity:0;"></div>
+        <div class="scene-el pointer-events-none absolute inset-0 flex select-none flex-col items-center justify-center hidden-initial" data-scene="h" data-z="10" aria-hidden="true" style="z-index:10;">
+          <span class="word-line block whitespace-nowrap font-display text-[clamp(5rem,30vw,9rem)] uppercase leading-[0.86] tracking-[-0.01em] md:text-[26vw] lg:text-[24vw] xl:text-[clamp(9rem,23vw,21rem)]" style="color:#FF7A1F;">SOUND</span>
+          <span class="word-line block whitespace-nowrap font-display text-[clamp(5rem,30vw,9rem)] uppercase leading-[0.86] tracking-[-0.01em] md:text-[26vw] lg:text-[24vw] xl:text-[clamp(9rem,23vw,21rem)]" style="color:#FF7A1F;">CORE</span>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[18%] top-[60%] md:left-[27%] md:top-[63%] xl:left-[33%] xl:top-[66%]" data-scene="h" data-z="20" aria-hidden="true" style="z-index:20;">
+          <div class="float-in"><img src="./img/acc-mic.svg" alt="" loading="lazy" decoding="async" draggable="false" class="w-[64px] md:w-[86px] xl:w-[106px] h-auto" style="transform:rotate(-14deg);"/></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 right-[7%] top-[38%] md:right-[20%] md:top-[41%] lg:right-[22%] xl:right-[26%] xl:top-[43%]" data-scene="h" data-z="30" aria-hidden="true" style="z-index:30;">
+          <div class="float-in"><div class="flex items-center justify-center rounded-full shadow-[0_12px_26px_rgba(0,0,0,0.35)] h-12 w-12 md:h-16 md:w-16 xl:h-[84px] xl:w-[84px]" style="background:#47200A;border:3px solid #FF6F14;"><img src="./img/acc-earcup.svg" alt="" loading="lazy" decoding="async" draggable="false" class="h-[72%] w-[72%] object-contain"/></div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 right-[9%] top-[58%] md:right-[22%] md:top-[60%] lg:right-[24%] xl:right-[28%] xl:top-[62%]" data-scene="h" data-z="30" aria-hidden="true" style="z-index:30;">
+          <div class="float-in"><div class="flex items-center justify-center rounded-full shadow-[0_12px_26px_rgba(0,0,0,0.35)] h-11 w-11 md:h-14 md:w-14 xl:h-[72px] xl:w-[72px]" style="background:#47200A;border:3px solid #FF6F14;"><img src="./img/acc-jack.svg" alt="" loading="lazy" decoding="async" draggable="false" class="h-[72%] w-[72%] object-contain"/></div></div>
+        </div>
+        <div class="scene-el absolute left-1/2 top-[44%] -translate-x-1/2 -translate-y-1/2 md:top-[46%] hero-w-h" data-scene="h" data-z="40" style="z-index:40;">
+          <div class="float-hero">
+            <img src="./img/hero-headset.svg" alt="Wireless ANC gaming headset with orange accents and boom microphone" loading="lazy" decoding="async" draggable="false" class="h-auto w-full" style="transform:rotate(-3deg);filter:drop-shadow(0 42px 54px rgba(0,0,0,0.42));"/>
+            <div class="hero-shadow absolute left-[20%] top-[92%] h-[32px] w-[60%] rounded-full" aria-hidden="true" style="background:radial-gradient(rgba(0,0,0,0.38) 0%, transparent 70%);filter:blur(5px);"></div>
+          </div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[14%] top-[25%] md:left-[26%] md:top-[26%] lg:left-[28%] xl:left-[30%] xl:top-[27%]" data-scene="h" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-4deg);background:rgba(40,14,3,0.78);border-color:#FF6F14;color:#FFA45C;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(255,111,20,0.2) 0px 0px 22px;">Hybrid ANC</div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[6%] top-[37%] md:left-[18%] md:top-[37%] lg:left-[20%] xl:left-[22%] xl:top-[38%]" data-scene="h" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-8deg);background:rgba(40,14,3,0.78);border-color:#FF6F14;color:#FFA45C;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(255,111,20,0.2) 0px 0px 22px;">40 h</div></div>
+        </div>
+        <div class="scene-el pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 left-[10%] top-[50%] md:left-[22%] md:top-[50%] lg:left-[24%] xl:left-[26%] xl:top-[52%]" data-scene="h" data-z="50" aria-hidden="true" style="z-index:50;">
+          <div class="float-in"><div class="chip whitespace-nowrap rounded-full border-[1.5px] px-4 py-2 font-sans text-[12px] font-bold tracking-[0.01em] md:px-[22px] md:py-2.5 md:text-[13.5px] xl:text-[15px]" style="transform:rotate(-10deg);background:rgba(40,14,3,0.78);border-color:#FF6F14;color:#FFA45C;box-shadow:rgba(0,0,0,0.35) 0px 10px 24px, rgba(255,111,20,0.2) 0px 0px 22px;">Hi-Res</div></div>
+        </div>
+
+        <!-- ===== DESC + CTAS + FLÈCHES (globaux) ===== -->
+        <div class="pointer-events-none absolute inset-x-0 top-[76%] z-[45] flex justify-center px-6 xl:top-[78%]">
+          <p id="descText" class="max-w-[760px] text-center font-sans text-[14.5px] font-semibold text-white md:text-base xl:text-lg">Hot-swappable mechanical boards with per-key RGB, gasket mounts, and tournament-grade response in every keystroke.</p>
+        </div>
+        <div id="ctas" class="absolute inset-x-0 top-[85%] z-[45] flex justify-center gap-6 xl:top-[87%]">
+          <button type="button" class="h-12 w-[130px] rounded-full font-sans text-[14.5px] font-bold tracking-[0.01em] transition-[scale,filter] duration-150 hover:scale-105 hover:brightness-[1.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.94] xl:h-[54px] xl:w-[150px]" style="background-color:#A238FF;color:#1A0530;">View Menu</button>
+          <button type="button" class="h-12 w-[130px] rounded-full bg-white font-sans text-[14.5px] font-bold tracking-[0.01em] text-[#111111] transition-[scale,filter] duration-150 hover:scale-105 hover:brightness-[1.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.94] xl:h-[54px] xl:w-[150px]">Find Us</button>
+        </div>
+        <div class="absolute left-[2.5vw] top-[44%] z-[60] -translate-y-1/2 md:top-[46%] xl:left-[3.4vw]">
+          <button id="prevBtn" type="button" aria-label="Previous product" class="group flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#111111] shadow-[0_10px_26px_rgba(0,0,0,0.30)] transition-all duration-150 hover:scale-[1.06] hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.94] md:h-12 md:w-12 xl:h-[58px] xl:w-[58px]">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="transition-transform duration-200 group-hover:-translate-x-0.5"><path d="M14.5 5.5 8 12l6.5 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+        <div class="absolute right-[2.5vw] top-[44%] z-[60] -translate-y-1/2 md:top-[46%] xl:right-[3.4vw]">
+          <button id="nextBtn" type="button" aria-label="Next product" class="group flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#111111] shadow-[0_10px_26px_rgba(0,0,0,0.30)] transition-all duration-150 hover:scale-[1.06] hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.94] md:h-12 md:w-12 xl:h-[58px] xl:w-[58px]">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-0.5"><path d="M9.5 5.5 16 12l-6.5 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+      </main>
+    </div>
+  </body></html>
